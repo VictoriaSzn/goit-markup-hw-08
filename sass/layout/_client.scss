@@ -1,0 +1,45 @@
+/*ul*/
+.client__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+/*a*/
+.client__list-link {
+    display: flex;
+    width: 210px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+   
+    transition: color 250ms var(--bezier),
+                border 250ms var(--bezier);
+
+&:hover,
+&:focus {
+        /* background-color: var(--accent-color) ; */
+        color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+}
+}
+/*цвет и размер иконок по умолчанию*/
+.client__list-icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+.client__list-link {
+    width: 226px;
+   }
+}
+@media screen and (min-width: 1200px) {
+    .client__list-link {
+        width: 170px;
+    }
+}
+

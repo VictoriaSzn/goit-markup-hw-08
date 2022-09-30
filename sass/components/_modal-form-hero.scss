@@ -1,0 +1,132 @@
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    /*перевернула ось для флекса*/
+}
+
+.modal-form-field {
+    margin-bottom: 10px;
+}
+
+.modal-form-field.textaria {
+    margin-bottom: 20px;
+}
+
+.modal-form-label-name {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.modal-form-input-thumb {
+    position: relative;
+    display: block;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color 250ms var(--bezier);
+}
+
+/*====================== focus-within + hoveer==============*/
+.modal-form-field:focus-within .modal-form-input,
+.modal-form-field:hover .modal-form-input,
+.modal-form-field:focus-within .modal-form-message,
+.modal-form-field:hover .modal-form-message {
+    border-color: var(--accent-color);
+}
+/*======================================================*/
+.modal-form-input:focus,
+.modal-form-message:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+.modal-form-input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms var(--bezier);
+.modal-form-input:focus+& {
+    fill: var(--accent-color);
+}
+/*====================== focus-within + hoveer==============*/
+.modal-form-field:focus-within &,
+.modal-form-field:hover &{
+    fill: var(--accent-color);
+}}
+
+.modal-form-checkbox-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    color: var(--text-color);
+}
+
+.link-agreement {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+@media screen and (min-width: 1200px){
+    .modal-form-checkbox-text {
+            
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    .link-agreement {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}
+.modal-form-message {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    transition: border-color 250ms var(--bezier);
+&::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}}
+
+.modal-form-checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/*прячем родной чекбокс*/
+.modal-form-checkbox {
+    position: absolute;
+    appearance: none;
+}
+
+.modal-form-own-checkbox {
+    border-radius: 2px;
+    border: 2px solid var(--text-primary-color);
+    fill: var(--white-color);
+    margin-right: 7px;
+.modal-form-checkbox:checked+& {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.modal-form-checkbox:focus+& {
+    border-color: var(--accent-color);
+}}

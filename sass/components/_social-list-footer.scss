@@ -1,0 +1,13 @@
+.social-list-link.footer {
+    background-color: var(--footer-link-color);
+    color: var(--white-color);
+    
+    transition: background-color 250ms var(--bezier);
+}
+.social-list-icon.footer {
+    fill: currentColor;
+}
+.social-list-link.footer:hover,
+.social-list-link.footer:focus {
+    background-color: var(--accent-color);
+}

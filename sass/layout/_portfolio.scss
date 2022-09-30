@@ -1,0 +1,123 @@
+/*ul*/
+.portfolio__cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/*li*/
+.portfolio__cards-list-item {
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+/*a====img++++div(h+p)*/
+.portfolio__cards-list-link {
+    display: block;
+    /*чтоб сработал ховер и фокус на ссылку*/
+    transition: box-shadow 250ms var(--bezier);
+&:focus,
+&:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}}
+
+/*================наплывающая картинка при ховере====*/
+/*разметка div=img+p(для оверлея)*/
+.portfolio-thumb {
+    position: relative;
+    /*для позиционирования ребенка <p> absolut*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/*текст на оверлей(backdrop) с позиционированием +opasity 0*/
+.portfolio-hover-text {
+    position: absolute;
+    /* opacity: 0;  убрали когда заменили бефор на екшенс*/
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--white-color);
+    padding: 63px 24px;
+}
+/*описание псевдоелемента + opasity 0
+.portfolio-thumb::before {
+  
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);*/
+/* opacity: 0; */
+/* transform: translateY(100%);
+    transition: transform 2050ms var(--bezier);
+} */
+/*при наведении на ссылку a=thumb+h+p использовать 
+псевдоелемент befor и текстдля оверлея с opasity 1*/
+/* .portfolio__cards-list-link:hover .portfolio-thumb::before,
+.portfolio__cards-list-link:hover .portfolio-hover-text {
+    opacity: 1;
+    transform: translateY(0);
+}*/
+.portfolio-actions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    /* opacity: 0; */
+    overflow: auto;
+    /*скрол для текста*/
+    transform: translateY(101%);
+    transition: transform 250ms var(--bezier);
+.portfolio__cards-list-link:hover &,
+.portfolio__cards-list-link:focus & {
+    /* opacity: 1; */
+    transform: translateY(0);
+}
+}
+/*h2+p=div*/
+.portfolio__cards-title {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-portfolio-color);
+    border-left: 1px solid var(--border-portfolio-color);
+    border-right: 1px solid var(--border-portfolio-color);
+}
+
+
+.portfolio {
+  /*h2*/  
+.title {
+    margin-bottom: 4px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+/*p*/
+.text {
+    font-size: 16px;
+    line-height: 1.88;
+}}
+
+@media screen and (max-width: 767px) {
+    .portfolio__cards-list{
+         flex-direction: column;
+    }
+}
+ @media screen and (min-width: 768px) and(max-width: 1199px) {
+    .portfolio__cards-list-item {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+    .portfolio__cards-list-link{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+}
+.portfolio__cards-title{
+    flex-grow: 1;
+}
+}

@@ -1,0 +1,63 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 90%;//450px//528px;
+    height: 609px;//581px;
+    background-color: var(--white-color);
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--bezier);
+    padding: 40px;
+.backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+    .modal {
+        width: 450px;
+        height: 609px;
+    }
+}
+@media screen and (min-width: 1200px) {
+.modal   {
+    width: 528px;
+    height: 581px;
+} 
+    
+}
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--header-logo-color);
+    background-color: var(--white-color);
+    /* margin-left: auto;
+    margin-top: 8px;
+    margin-right: 8px; займає місце в потоці*/
+}
+
+.icon-close-black {
+    transition: fill 500ms var(--bezier);
+.modal-close:hover & {
+    fill: var(--accent-color);
+}}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--text-primary-color);
+    margin-bottom: 12px;
+}

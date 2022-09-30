@@ -1,0 +1,159 @@
+
+
+.hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/Hero_mob.jpg);
+        background-color: #C4C4C4;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        max-width: 480px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 118px 0;
+    }
+
+    .hero-title {
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        color: var(--white-color);
+
+        max-width: 360px;
+
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.62;
+
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    /*кнопка героя*/
+    .btn-hero {
+        display: inline-block;
+        min-width: 200px;
+        padding: 10px 24px;
+
+        color: var(--white-color);
+        background-color: var(--accent-color);
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+
+        transition: background-color 250ms var(--bezier), box-shadow 250ms var(--bezier);
+
+        &:focus,
+        &:hover {
+            background-color: #188CE8;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+    /*mob*/
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/Hero_mob@2x.jpg);
+    }
+}
+/*tab*/
+@media screen and (min-width: 768px) {
+.hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/Hero_tabl.jpg);
+    max-width: 768px;
+    height: 400px;
+}
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/Hero_tabl@2x.jpg);
+    }
+}
+
+/* deck*/
+@media screen and (min-width: 1200px){
+.hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/hero.jpg);
+        max-width: 1600px;
+        height: 600px;
+        padding: 200px 0;
+        
+    }
+.hero-title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+}
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+       screen and (min-resolution: 192dpi) and (min-width: 1200px),
+       screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+.hero{        
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/hero/hero@2x.jpg);
+       }
+    }       
+// .hero {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//                        url(../images/hero.jpg);
+//     background-color: #C4C4C4;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+
+//     max-width: 1600px;
+//     height: 600px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     text-align: center;
+//     padding: 200px 0;
+// }
+
+// .hero-title {
+//     margin: 0 auto;
+//     margin-bottom: 30px;
+
+//     color: var(--white-color);
+
+//     width: 696px;
+
+//     font-weight: 900;
+//     font-size: 44px;
+//     line-height: 1.36;
+
+//     letter-spacing: 0.06em;
+//     text-transform: uppercase;
+// }
+// /*кнопка героя*/
+// .btn-hero {
+//     display: inline-block;
+//     min-width: 216px;
+//     padding: 10px 32px;
+
+//     color: var(--white-color);
+//     background-color: var(--accent-color);
+
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 1.88;
+//     letter-spacing: 0.06em;
+
+//     transition: background-color 250ms var(--bezier), box-shadow 250ms var(--bezier);
+// &:focus,
+// &:hover {
+//     background-color: #188CE8;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+// }}

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Портфоліо</title>
+    <!--modern normalize-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container heder__container">
+        <nav class="header__nav">
+          <a href="./index.html" class="logo logo-header-menu link">
+            <!--ссылка на возврат в начало страницы-->
+            Web<span class="logo-right-header-span link">Studio</span>
+          </a>
+          <ul class="header__nav-menu">
+            <!--список ссылок навигации по сайту-->
+            <li>
+              <a href="./index.html" class="header__nav-menu-link thumb-current link">Студія</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="header__nav-menu-link thumb-current current link"
+                >Портфоліо</a
+              >
+            </li>
+            <li>
+              <a href="" class="header__nav-menu-link thumb-current link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <!--бургер для моб версии-->
+        <button class="open-menu-mob-btn js-open-menu" type="button">
+          <svg class="burger-icon">
+            <use href="./images/svg/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <!--список контактов-->
+        <ul class="header__contacts">
+          <li>
+            <a href="mailto:info@devstudio.com" class="header__contacts-link mail link">
+              <svg aria-label="icon mail" class="contacts-icon" width="16" height="12">
+                <use href="./images/svg/sprite.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:+380961111111" class="header__contacts-link tel link">
+              <svg aria-label="icon tel" class="contacts-icon" width="10" height="16">
+                <use href="./images/svg/sprite.svg#icon-tel"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="mob-menu js-menu-container">
+        <div class="container mob-menu_container">
+          <button class="mob-menu__close-btn js-close-menu">
+            <svg class="mob-menu__close-icon">
+              <use href="./images/svg/sprite.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu__nav">
+            <li>
+              <a href="./index.html" class="mob-menu__nav-link link">Студія</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="mob-menu__nav-link current link">Портфоліо</a>
+            </li>
+            <li>
+              <a href="" class="mob-menu__nav-link link">Контакти</a>
+            </li>
+          </ul>
+          <div>
+            <ul class="mob-menu__contacts">
+              <li>
+                <a href="tel:+380961111111" class="mob-menu__tel link"> +38 096 111 11 11</a>
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="mob-menu__mail link">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__social">
+              <li class="mob-menu__social-item">
+                <a href="#" class="mob-menu__social-link padd-none link">Instagram</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a href="#" class="mob-menu__social-link link">Twitter</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a href="#" class="mob-menu__social-link link">Facebook</a>
+              </li>
+              <li>
+                <a href="#" class="mob-menu__social-link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="mob-menu js-menu-container">
+        <div class="container mob-menu_container">
+          <button class="mob-menu__close-btn js-close-menu">
+            <svg class="mob-menu__close-icon">
+              <use href="./images/svg/sprite.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu__nav">
+            <li>
+              <a href="./index.html" class="mob-menu__nav-link current link">Студія</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="mob-menu__nav-link link">Портфоліо</a>
+            </li>
+            <li>
+              <a href="" class="mob-menu__nav-link link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mob-menu__contacts">
+            <li>
+              <a href="tel:+380961111111" class="mob-menu__tel link"> +38 096 111 11 11</a>
+            </li>
+            <li>
+              <a href="mailto:info@devstudio.com" class="mob-menu__mail link">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-menu__social">
+            <li class="mob-menu__social-item">
+              <a href="#" class="mob-menu__social-link padd-none link">Instagram</a>
+            </li>
+            <li class="mob-menu__social-item">
+              <a href="#" class="mob-menu__social-link link">Twitter</a>
+            </li>
+            <li class="mob-menu__social-item">
+              <a href="#" class="mob-menu__social-link link">Facebook</a>
+            </li>
+            <li>
+              <a href="#" class="mob-menu__social-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+    </header>
+    <main>
+      <!--фильтр-->
+      <section class="portfolio">
+        <!--заголовок не будет отображатся на странице-->
+        <h1 class="visually-hidden">Портфоліо</h1>
+        <div class="container">
+          <ul class="portfolio__btn-list">
+            <li><button type="button" class="portfolio__btn-list-item">Усі</button></li>
+            <li><button type="button" class="portfolio__btn-list-item">Веб-сайт</button></li>
+            <li><button type="button" class="portfolio__btn-list-item">Додатки</button></li>
+            <li><button type="button" class="portfolio__btn-list-item">Дизайн</button></li>
+            <li><button type="button" class="portfolio__btn-list-item">Маркетинг</button></li>
+          </ul>
+          <!--portfolio-->
+          <ul class="portfolio__cards-list">
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk1.webp    1x,
+                        ./images/portfolio/desk/img_desk1@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk1.jpg    1x,
+                        ./images/portfolio/desk/img_desk1@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab1.webp    1x,
+                        ./images/portfolio/tab/img_tab1@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab1.jpg    1x,
+                        ./images/portfolio/tab/img_tab1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img1.webp    1x,
+                        ./images/portfolio/mob/img1@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img1.jpg    1x,
+                        ./images/portfolio/mob/img1@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Приклад сторінки веб-сайту" />
+                  </picture>
+
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Технокряк</h2>
+                  <p class="text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk2.webp    1x,
+                        ./images/portfolio/desk/img_desk2@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk2.jpg    1x,
+                        ./images/portfolio/desk/img_desk2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab2.webp    1x,
+                        ./images/portfolio/tab/img_tab2@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab2.jpg    1x,
+                        ./images/portfolio/tab/img_tab2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img2.webp    1x,
+                        ./images/portfolio/mob/img2@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img2.jpg    1x,
+                        ./images/portfolio/mob/img2@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Постер New Orlean vs Golden Star</h2>
+                  <p class="text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk3.webp    1x,
+                        ./images/portfolio/desk/img_desk3@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk3.jpg    1x,
+                        ./images/portfolio/desk/img_desk3@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab3.webp    1x,
+                        ./images/portfolio/tab/img_tab3@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab3.jpg    1x,
+                        ./images/portfolio/tab/img_tab3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img3.webp    1x,
+                        ./images/portfolio/mob/img3@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img3.jpg    1x,
+                        ./images/portfolio/mob/img3@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Лого ресторану Seafood" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Ресторан Seafood</h2>
+                  <p class="text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk4.webp    1x,
+                        ./images/portfolio/desk/img_desk4@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk4.jpg    1x,
+                        ./images/portfolio/desk/img_desk4@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab4.webp    1x,
+                        ./images/portfolio/tab/img_tab4@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab4.jpg    1x,
+                        ./images/portfolio/tab/img_tab4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img4.webp    1x,
+                        ./images/portfolio/mob/img4@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img4.jpg    1x,
+                        ./images/portfolio/mob/img4@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="навушники" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Проєкт Prime</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk5.webp    1x,
+                        ./images/portfolio/desk/img_desk5@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk5.jpg    1x,
+                        ./images/portfolio/desk/img_desk5@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab5.webp    1x,
+                        ./images/portfolio/tab/img_tab5@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab5.jpg    1x,
+                        ./images/portfolio/tab/img_tab5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img5.webp    1x,
+                        ./images/portfolio/mob/img5@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img5.jpg    1x,
+                        ./images/portfolio/mob/img5@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Дві коробки біла та бежева" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Проєкт Boxes</h2>
+                  <p class="text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk6.webp    1x,
+                        ./images/portfolio/desk/img_desk6@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk6.jpg    1x,
+                        ./images/portfolio/desk/img_desk6@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab6.webp    1x,
+                        ./images/portfolio/tab/img_tab6@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab6.jpg    1x,
+                        ./images/portfolio/tab/img_tab6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img6.webp    1x,
+                        ./images/portfolio/mob/img6@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img6.jpg    1x,
+                        ./images/portfolio/mob/img6@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Монітор з прикладом веб-сайту" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Inspiration has no Borders</h2>
+                  <p class="text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk7.webp    1x,
+                        ./images/portfolio/desk/img_desk7@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk7.jpg    1x,
+                        ./images/portfolio/desk/img_desk7@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab7.webp    1x,
+                        ./images/portfolio/tab/img_tab7@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab7.jpg    1x,
+                        ./images/portfolio/tab/img_tab7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img7.webp    1x,
+                        ./images/portfolio/mob/img7@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img7.jpg    1x,
+                        ./images/portfolio/mob/img7@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Розгорнута сторінка журналу Limited Edition" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Видання Limited Edition</h2>
+                  <p class="text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk8.webp    1x,
+                        ./images/portfolio/desk/img_desk8@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk8.jpg    1x,
+                        ./images/portfolio/desk/img_desk8@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab8.webp    1x,
+                        ./images/portfolio/tab/img_tab8@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab8.jpg    1x,
+                        ./images/portfolio/tab/img_tab8@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img8.webp    1x,
+                        ./images/portfolio/mob/img8@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img8.jpg    1x,
+                        ./images/portfolio/mob/img8@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Біла етикетка з написом Lab el tag" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Проєкт LAB</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__cards-list-item">
+              <a class="portfolio__cards-list-link link" href="">
+                <div class="portfolio-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk9.webp    1x,
+                        ./images/portfolio/desk/img_desk9@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/img_desk9.jpg    1x,
+                        ./images/portfolio/desk/img_desk9@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab9.webp    1x,
+                        ./images/portfolio/tab/img_tab9@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/img_tab9.jpg    1x,
+                        ./images/portfolio/tab/img_tab9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img9.webp    1x,
+                        ./images/portfolio/mob/img9@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img9.jpg    1x,
+                        ./images/portfolio/mob/img9@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="#" alt="Відкритий ноутбук" />
+                  </picture>
+                  <p class="portfolio-hover-text portfolio-actions">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                    приватну особу. Технокряк Веб-сайт
+                  </p>
+                </div>
+
+                <div class="portfolio__cards-title">
+                  <h2 class="title">Growing Business</h2>
+                  <p class="text">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <!--тег addres-->
+      <div class="container footer__block">
+        <div class="footer__for-tablet">
+          <div class="footer__block-logo-address">
+            <a href="./index.html" class="logo link">
+              Web<span class="footer-logo link">Studio</span></a
+            >
+            <address>
+              <ul class="footer-address-list">
+                <li class="footer-address-item">
+                  <a
+                    href="https://goo.gl/maps/6emUorHh679U21bC7"
+                    target="_blank"
+                    rel="noopener nofollow noreferrer"
+                    class="footer-address-link link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="footer-address-item">
+                  <a href="mailto:info@devstudio.com" class="footer-contacts-link mail link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-address-item without-margin">
+                  <a href="tel:+380961111111" class="footer-contacts-link link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__block-social">
+            <p class="footer-title">Приєднуйтесь</p>
+            <ul class="social-list">
+              <li class="social-list-item">
+                <a href="#" class="social-list-link footer">
+                  <svg
+                    aria-label="icon instagram"
+                    class="social-list-icon footer"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-list-link footer">
+                  <svg
+                    aria-label="icon facebook"
+                    class="social-list-icon footer"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-list-link footer">
+                  <svg
+                    aria-label="icon twitter"
+                    class="social-list-icon footer"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-list-link footer">
+                  <svg
+                    aria-label="icon linkedin"
+                    class="social-list-icon footer"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form class="footer-form">
+          <p class="footer-form-title">Підпишіться на розсилку</p>
+          <div class="footer-form-subscribe">
+            <label class="footer-form-label">
+              <input
+                type="email"
+                class="footer-form-input"
+                name="mail footer"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button type="submit" class="btn-footer-submit">
+              Підписатися
+              <svg aria-label="icon send" class="icon-send" width="24" height="24">
+                <use href="./images/svg/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </footer>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
